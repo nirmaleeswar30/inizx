@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Island+Moments&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* We'll apply 'Inter' using a class in App.jsx or directly on elements */
+  background-color: #fff; /* Ensure body background is white */
+}
