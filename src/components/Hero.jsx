@@ -1,48 +1,57 @@
-// src/components/Hero.jsx
 import React from 'react';
-import mainProfilePic from '../assets/main-profile-pic.jpg'; // Create this file
+import mainProfilePic from '../assets/main-profile-pic.jpg';
 
-const Hero = () => {
+const HeroSection = () => {
   return (
-    <section id="hero" className="bg-white py-16 sm:py-24 lg:py-32">
-      <div className="container mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-12 px-4 sm:px-6 lg:px-8">
-        {/* Profile Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <img
-            src={mainProfilePic}
-            alt="Iniya B.C"
-            className="w-full max-w-sm rounded-lg shadow-xl"
-          />
+    <section id="hero" className="min-h-screen bg-white flex items-center justify-center px-4 py-20 mt-12">
+      <div className="max-w-5xl w-full flex items-center justify-between gap-4">
+        
+        {/* Left Side - Image */}
+        <div className="flex-1 flex justify-center">
+          <div className="relative">
+            {/* Shadow layers - creating the thick shadow frame effect */}
+            <div className="absolute top-4 left-4 w-11/12 h-full bg-[#361921] "></div>
+            {/* <div className="absolute top-2 left-2 w-80 h-96 bg-gray-700 rounded-lg"></div> */}
+            {/* <div className="absolute top-1 left-1 w-80 h-96 bg-gray-600 rounded-lg"></div> */}
+            
+            {/* Main image container */}
+            <div className="relative  overflow-hidden">
+              <img 
+                src={mainProfilePic} 
+                alt="Iniya B.C" 
+                className="w-11/12 h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* Text Content */}
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary-dark mb-4">
-            Iniya B.C
-          </h1>
-          <p className="text-2xl text-gray-700 mb-8">
-            Aspiring Criminal Psychologist
-          </p>
-
-          <div className="space-y-4 text-lg text-gray-800">
-            <p>
-              <span className="font-semibold text-primary-dark">Expertise:</span>{' '}
-              Teamwork, Problem-Solving, Research
-            </p>
-            <p>
-              <span className="font-semibold text-primary-dark">Hobby:</span>{' '}
-              Dancing, Drawing, Traveling, Reading
-            </p>
+        {/* Right Side - Content */}
+        <div className="flex-1 space-y-1">
+          <div>
+            <h1 className="text-4xl font-bold text-[#361921] mb-2">
+              Iniya B.C
+            </h1>
+            <h2 className="text-2xl text-black font-light">
+              Aspiring Criminal Psychologist
+            </h2>
           </div>
 
-          {/* Placeholder for CTA buttons - feel free to add them */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="bg-primary-dark text-white px-8 py-3 rounded-md hover:bg-accent-brown transition-colors duration-200 text-lg">
-              Download Resume
-            </button>
-            <button className="border border-primary-dark text-primary-dark px-8 py-3 rounded-md hover:bg-primary-dark hover:text-white transition-colors duration-200 text-lg">
-              Get in Touch
-            </button>
+          <div className="space-y-2 mt-10">
+            <div>
+              <span className="text-lg font-semibold text-gray-800">Expertise: </span>
+              <span className="text-lg text-gray-700">Teamwork, Problem-Solving, Research Skills</span>
+            </div>
+            
+            <div>
+              <span className="text-lg font-semibold text-gray-800">Hobby: </span>
+              <span className="text-lg text-gray-700">Dancing, Drawing, Traveling, Reading</span>
+            </div>
+          </div>
+
+          {/* Placeholder buttons/elements as shown in the image */}
+          <div className="space-y-3 mt-20">
+            <div className="w-32 h-4 bg-[#D9D9D9]"></div>
+            <div className="w-40 h-4 bg-[#D9D9D9]"></div>
           </div>
         </div>
       </div>
@@ -50,4 +59,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
