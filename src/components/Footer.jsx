@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Footer = () => {
-  const scrollToHome = () => {
-    const homeSection = document.getElementById('home');
-    if (homeSection) {
-      homeSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+//   const scrollToHome = () => {
+//     const homeSection = document.getElementById('home');
+//     if (homeSection) {
+//       homeSection.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
 
   return (
     <footer className="bg-[#361921] text-white text-center py-8 px-4 relative overflow-hidden">
@@ -63,7 +63,7 @@ const Footer = () => {
             </svg>
           </a> */}
           <a 
-            href="#" 
+            href="https://www.instagram.com/inizx.z/" 
             className="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300 hover:-rotate-12"
             aria-label="Social media link"
           >
@@ -81,7 +81,7 @@ const Footer = () => {
             </svg>
           </a> */}
           <a
-            href="https://www.linkedin.com/in/your-profile" // Replace with your actual LinkedIn URL
+            href="https://linkedin.com/in/iniya-chandra-krishnan-125329309" // Replace with your actual LinkedIn URL
             className="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300 hover:rotate-12"
             aria-label="LinkedIn profile"
             target="_blank"

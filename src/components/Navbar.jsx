@@ -1,6 +1,6 @@
-// src/components/Navbar.jsx
 import React, { useState, useEffect } from 'react';
-import profileAvatar from '../assets/profile-avatar.png'; // Ensure this path is correct
+import profileAvatar from '../assets/profile-avatar.png';
+import resumeFile from '../assets/resume.pdf'; // Import the resume PDF
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -9,9 +9,17 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#hero' },
     { name: 'About me', href: '#about' },
-    { name: 'Resume', href: '#resume' },
+    { name: 'Resume', href: resumeFile, download: true }, // Updated for download
     { name: 'Contact', href: '#contact' },
   ];
+
+  // Function to scroll to home section
+  const scrollToHome = () => {
+    const homeSection = document.getElementById('hero');
+    if (homeSection) {
+      homeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +60,7 @@ const Navbar = () => {
     <div 
       className={`
         fixed top-4 left-0 right-0 z-50
-        w-full flex justify-center py-4  backdrop-blur-sm
+        w-full flex justify-center py-4 backdrop-blur-sm
         transition-transform duration-300 ease-in-out
         ${isVisible ? 'translate-y-0' : '-translate-y-full'}
       `}
@@ -82,12 +90,17 @@ const Navbar = () => {
                      transition-transform duration-300 ease-in-out
                      hover:scale-110 hover:shadow-md
                      cursor-pointer"
+            onClick={scrollToHome} // Added click handler
           />
-          {/* Apply Island Moments font using arbitrary value */}
-          <span className={`font-['Island_Moments'] text-[#361921] text-3xl md:text-4xl
-                          transition-all duration-300 ease-in-out
-                          hover:text-[#2d1419] hover:scale-105
-                          cursor-pointer`}>
+          <span 
+            className={`
+              font-['Island_Moments'] text-[#361921] text-3xl md:text-4xl
+              transition-all duration-300 ease-in-out
+              hover:text-[#2d1419] hover:scale-105
+              cursor-pointer
+            `}
+            onClick={scrollToHome} // Added click handler
+          >
             Inizx
           </span>
         </div>
@@ -98,6 +111,7 @@ const Navbar = () => {
             <li key={link.name}>
               <a
                 href={link.href}
+                download={link.download ? true : undefined} // Enable download for Resume
                 className={`
                   text-[#361921]
                   hover:text-[#361919]

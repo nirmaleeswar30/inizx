@@ -3,9 +3,15 @@
 
 html {
   scroll-behavior: smooth;
+  --cursor-size: 64px;
 }
 
 body {
   /* We'll apply 'Inter' using a class in App.jsx or directly on elements */
   background-color: #fff; /* Ensure body background is white */
+}
+
+
+.custom-cursor {
+  cursor: url('./assets/custom-cursor.svg') 64 64, auto;
 }

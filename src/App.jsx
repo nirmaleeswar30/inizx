@@ -9,8 +9,8 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    // Apply Inter font globally here using arbitrary value
-    <div className="font-['Inter'] antialiased text-gray-800">
+    // Apply Inter font globally and the custom cursor class here
+    <div className="font-['Inter'] antialiased text-gray-800 custom-cursor">
       <Navbar />
       <main>
         <Hero />

@@ -256,7 +256,7 @@ const ContactSection = () => {
           }`}
         >
           <div className="flex space-x-2 justify-center">
-            {['name', 'email', 'message'].map((field, index) => (
+            {['name', 'email', 'message'].map((field) => (
               <div
                 key={field}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
